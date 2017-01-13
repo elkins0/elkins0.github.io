@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>IntersectingConicsTangencies.cdy</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #CSConsole {
+            background-color: #FAFAFA;
+            border-top: 1px solid #333333;
+            bottom: 0px;
+            height: 200px;
+            overflow-y: scroll;
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="http://cindyjs.org/dist/v0.8/CindyJS.css">
+    <script type="text/javascript" src="http://cindyjs.org/dist/v0.8/Cindy.js"></script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "A", type: "Free", pos: [4.0, -0.0, 0.26666666666666666], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "B", type: "Free", pos: [4.0, -0.5714285714285714, 0.11428571428571428], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "C", type: "Free", pos: [4.0, -4.0, 0.4], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "D", type: "Free", pos: [3.0, -4.0, 0.2], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "E", type: "Free", pos: [2.6666666666666665, -4.0, 0.26666666666666666], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "C0", type: "ConicBy5", color: [1.0, 0.0, 0.0], args: ["A", "B", "C", "D", "E"], alpha: 0.8999999761581421, size: 3},
+    {name: "F", type: "Free", pos: [4.0, 0.8, 0.16], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "G", type: "Free", pos: [4.0, -2.6666666666666665, 0.26666666666666666], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "H", type: "Free", pos: [4.0, -0.44444444444444453, 0.08888888888888888], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "K", type: "Free", pos: [4.0, -1.6, 0.08], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "L", type: "Free", pos: [4.0, -2.6666666666666665, 0.13333333333333333], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, labeled: true},
+    {name: "C1", type: "ConicBy5", color: [0.0, 0.0, 1.0], args: ["F", "G", "H", "K", "L"], alpha: 0.8999999761581421, size: 3},
+    {name: "Collection__1", type: "IntersectionConicConic", args: ["C0", "C1"]},
+    {name: "P", type: "SelectP", pos: [4.0, {r: 0.12087418767680395, i: -4.4268849618139854E-15}, {r: 0.1108438845920927, i: -3.893461208869823E-16}], color: [1.0, 0.0, 0.0], args: ["Collection__1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "N", type: "SelectP", pos: [4.0, {r: -2.829776225652159, i: 8.578052449967455E-15}, {r: 0.16161383345418062, i: -1.6148694695554146E-16}], color: [1.0, 0.0, 0.0], args: ["Collection__1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "O", type: "SelectP", pos: [4.0, {r: 1.0339290467242856, i: 1.785915726005191E-14}, {r: 0.18916242634680022, i: 1.4584220863925538E-15}], color: [1.0, 0.0, 0.0], args: ["Collection__1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "M", type: "SelectP", pos: [4.0, {r: -1.7801646984937032, i: 1.1916247426410834E-14}, {r: 0.3433826309425128, i: 1.0800263641349361E-15}], color: [1.0, 0.0, 0.0], args: ["Collection__1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "a", type: "Join", color: [0.467, 0.0, 0.718], args: ["M", "N"], alpha: 0.8999999761581421, labeled: true},
+    {name: "b", type: "Join", color: [0.467, 0.0, 0.718], args: ["N", "O"], alpha: 0.8999999761581421, labeled: true},
+    {name: "c", type: "Join", color: [0.467, 0.0, 0.718], args: ["M", "P"], alpha: 0.8999999761581421, labeled: true},
+    {name: "d", type: "Join", color: [0.467, 0.0, 0.718], args: ["P", "O"], alpha: 0.8999999761581421, labeled: true},
+    {name: "e", type: "Join", color: [0.467, 0.0, 0.718], args: ["M", "O"], alpha: 0.8999999761581421, labeled: true},
+    {name: "f", type: "Join", color: [0.467, 0.0, 0.718], args: ["N", "P"], alpha: 0.8999999761581421, labeled: true},
+    {name: "P1", type: "Meet", color: [1.0, 0.686, 0.686], args: ["e", "f"], alpha: 0.8999999761581421, labeled: true},
+    {name: "P2", type: "Meet", color: [1.0, 0.686, 0.686], args: ["b", "c"], alpha: 0.8999999761581421, labeled: true},
+    {name: "P3", type: "Meet", color: [1.0, 0.686, 0.686], args: ["a", "d"], alpha: 0.8999999761581421, labeled: true},
+    {name: "g", type: "Join", color: [1.0, 0.686, 0.686], args: ["P1", "P2"], alpha: 0.8999999761581421, labeled: true},
+    {name: "h", type: "Join", color: [1.0, 0.686, 0.686], args: ["P2", "P3"], alpha: 0.8999999761581421, labeled: true},
+    {name: "k", type: "Join", color: [1.0, 0.686, 0.686], args: ["P3", "P1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Q12", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["c", "C0"], alpha: 0.8999999761581421, labeled: true},
+    {name: "R12", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["c", "C1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "S12", type: "PointOnLine", pos: [4.0, {r: 1.7676776125412879, i: 0.10259766629665058}, {r: -0.0905962893514181, i: -0.012549944597487575}], color: [0.467, 0.0, 0.718], args: ["c"], alpha: 0.8999999761581421, labeled: true},
+    {name: "l12", type: "Join", color: [1.0, 0.0, 0.0], args: ["S12", "Q12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "m12", type: "Join", color: [0.0, 0.0, 1.0], args: ["S12", "R12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__2", type: "IntersectionConicLine", args: ["C0", "l12"]},
+    {name: "U12", type: "SelectP", pos: [4.0, {r: 3.554723256558227, i: -1.392337014193264}, {r: 0.03960798578568815, i: -0.10215905731421955}], color: [1.0, 0.0, 0.0], args: ["Collection__2"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T12", type: "SelectP", pos: [{r: -3.6488569249976543, i: 1.5923174249937893}, -4.0, {r: -0.06697944025081269, i: -0.08074153369969334}], color: [1.0, 0.0, 0.0], args: ["Collection__2"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__3", type: "IntersectionConicLine", args: ["C1", "m12"]},
+    {name: "V12", type: "SelectP", pos: [{r: -0.9235851453518202, i: 3.0316845224061892}, -4.0, {r: -0.1448620291937724, i: -0.13116637489468036}], color: [0.0, 0.0, 1.0], args: ["Collection__3"], alpha: 0.8999999761581421, labeled: true},
+    {name: "W12", type: "SelectP", pos: [{r: -1.2126257498112438, i: -2.950956936771713}, -4.0, {r: -0.15820294798578996, i: 0.13743340769000859}], color: [0.0, 0.0, 1.0], args: ["Collection__3"], alpha: 0.8999999761581421, labeled: true},
+    {name: "n12", type: "Join", color: [1.0, 0.784, 0.0], args: ["T12", "V12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "o12", type: "Join", color: [1.0, 0.784, 0.0], args: ["U12", "W12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T1", type: "Meet", color: [1.0, 0.784, 0.0], args: ["n12", "o12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "p12", type: "Join", color: [1.0, 0.784, 0.0], args: ["U12", "V12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "q12", type: "Join", color: [1.0, 0.784, 0.0], args: ["T12", "W12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T2", type: "Meet", color: [1.0, 0.784, 0.0], args: ["p12", "q12"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Q34", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["e", "C0"], alpha: 0.8999999761581421, labeled: true},
+    {name: "R34", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["e", "C1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "S34", type: "PointOnLine", pos: [{r: -3.3674602133907157, i: 0.19631682242588674}, -4.0, {r: 0.012260018672101651, i: 0.012064877493195462}], color: [0.467, 0.0, 0.718], args: ["e"], alpha: 0.8999999761581421, labeled: true},
+    {name: "l34", type: "Join", color: [1.0, 0.0, 0.0], args: ["S34", "Q34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "m34", type: "Join", color: [0.0, 0.0, 1.0], args: ["S34", "R34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__4", type: "IntersectionConicLine", args: ["C0", "l34"]},
+    {name: "U34", type: "SelectP", pos: [4.0, {r: 0.8261353353692582, i: 1.281822544056171}, {r: 0.24056710485404273, i: -0.08331528885714284}], color: [1.0, 0.0, 0.0], args: ["Collection__4"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T34", type: "SelectP", pos: [4.0, {r: 0.8705616955337026, i: -1.3176242434917949}, {r: 0.2393988769288527, i: 0.0862260737734683}], color: [1.0, 0.0, 0.0], args: ["Collection__4"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__5", type: "IntersectionConicLine", args: ["C1", "m34"]},
+    {name: "V34", type: "SelectP", pos: [{r: -3.761236132327073, i: 0.44204101155119047}, -4.0, {r: -0.28594626099188103, i: 0.3347324704539948}], color: [0.0, 0.0, 1.0], args: ["Collection__5"], alpha: 0.8999999761581421, labeled: true},
+    {name: "W34", type: "SelectP", pos: [{r: -3.5662140480473123, i: -0.2232143219345778}, -4.0, {r: -0.273949426300947, i: -0.32138360885206024}], color: [0.0, 0.0, 1.0], args: ["Collection__5"], alpha: 0.8999999761581421, labeled: true},
+    {name: "n34", type: "Join", color: [1.0, 0.784, 0.0], args: ["T34", "V34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "o34", type: "Join", color: [1.0, 0.784, 0.0], args: ["U34", "W34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T3", type: "Meet", color: [1.0, 0.784, 0.0], args: ["n34", "o34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "p34", type: "Join", color: [1.0, 0.784, 0.0], args: ["U34", "V34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "q34", type: "Join", color: [1.0, 0.784, 0.0], args: ["T34", "W34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T4", type: "Meet", color: [1.0, 0.784, 0.0], args: ["p34", "q34"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Q56", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["d", "C0"], alpha: 0.8999999761581421, labeled: true},
+    {name: "R56", type: "PolarOfLine", color: [0.467, 0.0, 0.718], args: ["d", "C1"], alpha: 0.8999999761581421, labeled: true},
+    {name: "S56", type: "PointOnLine", pos: [4.0, {r: -1.3386724721553664, i: -0.09601127445063241}, {r: -0.014350746254360395, i: -0.008235499688188415}], color: [0.467, 0.0, 0.718], args: ["d"], alpha: 0.8999999761581421, labeled: true},
+    {name: "l56", type: "Join", color: [1.0, 0.0, 0.0], args: ["S56", "Q56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "m56", type: "Join", color: [0.0, 0.0, 1.0], args: ["S56", "R56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__6", type: "IntersectionConicLine", args: ["C0", "l56"]},
+    {name: "U56", type: "SelectP", pos: [4.0, {r: 1.4013228866800735, i: -0.7645004252474088}, {r: 0.10401660161515953, i: -0.0330867617186452}], color: [1.0, 0.0, 0.0], args: ["Collection__6"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T56", type: "SelectP", pos: [4.0, {r: 1.4214061608687631, i: 0.7935714264687268}, {r: 0.10271593752250574, i: 0.03372220485257241}], color: [1.0, 0.0, 0.0], args: ["Collection__6"], alpha: 0.8999999761581421, labeled: true},
+    {name: "Collection__7", type: "IntersectionConicLine", args: ["C1", "m56"]},
+    {name: "V56", type: "SelectP", pos: [4.0, {r: 0.5982419823147901, i: 0.5067906106894119}, {r: 0.13170806958843556, i: 0.038229857209664014}], color: [0.0, 0.0, 1.0], args: ["Collection__7"], alpha: 0.8999999761581421, labeled: true},
+    {name: "W56", type: "SelectP", pos: [4.0, {r: 0.5982257793241996, i: -0.4931160929388696}, {r: 0.13218186499985823, i: -0.03731893452578009}], color: [0.0, 0.0, 1.0], args: ["Collection__7"], alpha: 0.8999999761581421, labeled: true},
+    {name: "n56", type: "Join", color: [1.0, 0.784, 0.0], args: ["T56", "V56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "o56", type: "Join", color: [1.0, 0.784, 0.0], args: ["U56", "W56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T5", type: "Meet", color: [1.0, 0.784, 0.0], args: ["n56", "o56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "p56", type: "Join", color: [1.0, 0.784, 0.0], args: ["U56", "V56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "q56", type: "Join", color: [1.0, 0.784, 0.0], args: ["T56", "W56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "T6", type: "Meet", color: [1.0, 0.784, 0.0], args: ["p56", "q56"], alpha: 0.8999999761581421, labeled: true},
+    {name: "l", type: "Join", color: [1.0, 1.0, 0.0], args: ["T1", "T4"], alpha: 0.8999999761581421, labeled: true, size: 3},
+    {name: "m", type: "Join", color: [1.0, 1.0, 0.0], args: ["T4", "T2"], alpha: 0.8999999761581421, labeled: true, size: 3},
+    {name: "n", type: "Join", color: [1.0, 1.0, 0.0], args: ["T5", "T2"], alpha: 0.8999999761581421, labeled: true, size: 3},
+    {name: "o", type: "Join", color: [1.0, 1.0, 0.0], args: ["T6", "T1"], alpha: 0.8999999761581421, labeled: true, size: 3}
+  ],
+  ports: [{
+    id: "CSCanvas",
+    width: 680,
+    height: 350,
+    transform: [{visibleRect: [-56.407142857142844, 33.60714285714286, 69.87857142857143, -31.39285714285713]}],
+    axes: true,
+    grid: 5.0,
+    snap: true,
+    background: "rgb(168,176,192)"
+  }],
+  csconsole: false,
+  cinderella: {build: 1898, version: [2, 9, 1898]}
+});
+    </script>
+</head>
+<body>
+    <div id="CSCanvas"></div>
+</body>
+</html>
